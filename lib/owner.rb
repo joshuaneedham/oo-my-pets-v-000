@@ -9,7 +9,7 @@ class Owner
     @pets = {}
     @@owners = 0
   end
-  
+
   def species
   end
 
@@ -45,9 +45,9 @@ class Owner
   end
 
   def list_pets
-    puts @pets
+    @pets.each { |pet| puts "#{pet}"  }
   end
-  
+
   def self.count
     @@owners
   end
