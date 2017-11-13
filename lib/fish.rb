@@ -8,6 +8,6 @@ class Fish
   end
 
   def self.mood
-    @mood   
+    @mood
   end
 end
