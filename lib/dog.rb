@@ -8,6 +8,6 @@ class Dog
   end
 
   def self.mood
-    @mood   
+    @mood
   end
 end
