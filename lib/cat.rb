@@ -8,6 +8,6 @@ class Cat
   end
 
   def self.mood
-    @mood   
+    @mood
   end
 end
