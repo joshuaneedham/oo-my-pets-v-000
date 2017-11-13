@@ -6,4 +6,8 @@ class Cat
     @name = name
     @mood = mood
   end
+
+  def self.mood
+    @mood   
+  end
 end
