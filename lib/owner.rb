@@ -2,8 +2,8 @@ class Owner
   # code goes here
   attr_accessor :pets
 
-  @@pets
-  @@owners
+  @@pets = {}
+  @@owners = []
   def initialize(name)
     @name = name
     @pets = {}
