@@ -16,10 +16,6 @@ class Owner
   def say_species
   end
 
-  def name
-    @name
-  end
-
   def pets
   end
 
