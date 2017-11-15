@@ -4,10 +4,10 @@ class Owner
 
   @@pets = {}
   @@owners = []
+  
   def initialize(name)
     @name = name
-    @pets = {}
-    @@owners = 0
+
   end
 
   def species
