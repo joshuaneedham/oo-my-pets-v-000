@@ -1,49 +1,72 @@
 class Owner
   # code goes here
+  OWNER = []
   attr_accessor :pets, :name
+  attr_reader :species
 
-  @@pets = {}
-  @@owners = []
-
-  def initialize(name)
-    @name = name
+  def self.reset_all
+    OWNERS.clear
   end
 
-  def species
-  end
-
-  def say_species
-  end
-
-  def pets
-  end
-
-  def buy_fish
-  end
-
-  def buy_cat
-  end
-
-  def buy_dog
-  end
-
-  def walk_dogs
-  end
-
-  def play_with_cats
-  end
-
-  def feed_fish
-  end
-
-  def sell_pets
-  end
-
-  def list_pets
-    @pets.each { |pet| puts "#{pet}"  }
+  def self.all
+    OWNERS
   end
 
   def self.count
-    @@owners
+    OWNERS.size
   end
+
+  @@pets = {}
+
+  def initialize(species)
+    @species = species
+    OWNERS << self
+    @pets = {:fishes => [], :dogs => [], :cats => []}
+  end
+
+  def buy_fish(name)
+    pets[:fishes] << Fish.new(name)
+  end
+
+  def buy_cat(name)
+    pets[:cats] << Cat.new(name)
+  end
+
+  def buy_dog(name)
+    pets[:dogs] << Dog.new(name)
+  end
+
+  def walk_dogs
+    pets[:dogs].each do |dog|
+      dog.mood = "happy"
+    end
+  end
+
+  def play_with_cats
+    pets[:cats].each do |cat|
+      cat.mood = "happy"
+    end
+  end
+
+  def feed_fish
+    pets[:fishes].each do |fish|
+      fish.mood = "happy"
+    end
+  end
+
+  def sell_pets
+    pets.each do |species, animals|
+      animals.each do |animal|
+        animal.mood = "nervous"
+      end
+      animals.clear
+    end
+  end
+
+  
+
+
+  
 end
+
+
