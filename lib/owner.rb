@@ -1,6 +1,6 @@
 class Owner
   # code goes here
-  attr_accessor :pets
+  attr_accessor :pets, :name
 
   @@pets = {}
   @@owners = []
@@ -14,10 +14,6 @@ class Owner
   end
 
   def say_species
-  end
-
-  def name
-    @name
   end
 
   def pets
